@@ -16,26 +16,19 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Token {
 
     /**
-     * constants definition.
-     */
-    public static final char LP    = '(';
-    public static final char RP    = ')';
-    public static final char QUOTE = '\"';
-
-    /**
      * token type.
      */
-    private TokenType        type;
+    private TokenType type;
 
     /**
      * token value.
      */
-    private String           value;
+    private String    value;
 
     /**
      * offset in the stream.
      */
-    private int              offset;
+    private int       offset;
 
     /**
      * Construct a token with given type and value.

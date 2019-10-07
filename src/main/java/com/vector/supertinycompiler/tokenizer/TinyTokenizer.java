@@ -44,13 +44,13 @@ public class TinyTokenizer implements Tokenizer {
                 continue;
             }
 
-            if (pos == Token.LP) {
+            if (pos == '(') {
                 tokens.add(new Token(TokenType.LPAREN, String.valueOf(pos)));
                 current++;
                 continue;
             }
 
-            if (pos == Token.RP) {
+            if (pos == ')') {
                 tokens.add(new Token(TokenType.RPAREN, String.valueOf(pos)));
                 current++;
                 continue;
@@ -68,12 +68,12 @@ public class TinyTokenizer implements Tokenizer {
                 continue;
             }
 
-            if (pos == Token.QUOTE) {
+            if (pos == '\"') {
                 StringBuilder value = new StringBuilder();
 
                 pos = input.charAt(++current);
 
-                while (pos != Token.QUOTE) {
+                while (pos != '\"') {
                     value.append(pos);
                     pos = input.charAt(++current);
                 }

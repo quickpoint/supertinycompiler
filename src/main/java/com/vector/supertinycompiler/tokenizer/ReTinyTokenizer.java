@@ -42,7 +42,7 @@ public class ReTinyTokenizer implements Tokenizer {
                 continue;
             }
 
-            if (TokenizerHintUtil.isLeftParentsis(pos)) {
+            if (TokenizerHintUtil.isLeftParenthesis(pos)) {
                 tokens.add(new Token(TokenType.LPAREN, String.valueOf(pos), pos));
                 scanner.indexNext();
                 continue;
